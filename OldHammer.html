@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página com Bloqueio de Conteúdo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="principal">
+        <h2>Cidade de OldHammer</h2>
+        <img src="imagens\oldhammer.png" alt="oldhammerImg">
+    </div>
+    <div class="bloco">
+        <!-- <h2>Cidade de OldHammer</h2> -->
+        <!-- <img src="imagens\oldhammer.png" alt="oldhammer"> -->
+        <input type="password" id="herbalistapass" placeholder="Código da herbalista">
+        <button onclick="verificarSenhaLoja()">Acessar herbalista</button>
+        <div id="herbalistaLoja" style="display:none;">
+            <p>Produtos:</p>
+            <p>Poção de cura - 50 PO</p>
+        </div>
+        <input type="password" id="ferreiroPass" placeholder="Código do Ferreiro">
+        <button onclick="verificarSenhaFerreiro()">Acessar Ferreiro</button>
+        <div id="ferreiro" style="display:none;">
+            <p>Produtos:</p>
+            <p>Espada longa - 50 PO</p>
+        </div>
+    </div>
+
+    <div class="bloco">
+        <h2>Bloco 2 - Requer Senha</h2>
+        <input type="password" id="senha2" placeholder="Digite a senha">
+        <button onclick="verificarSenha(2)">Acessar Bloco 2</button>
+        <div id="conteudo2" style="display:none;">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <p>Texto do bloco 2.</p>
+        </div>
+    </div>
+
+    <!-- Adicione mais blocos aqui, seguindo a mesma estrutura -->
+
+    <script>
+        function verificarSenha(numeroBloco) {
+            var senha = document.getElementById("senha" + numeroBloco).value;
+            var senhaCorreta = "senha" + numeroBloco; // Defina a senha correta para cada bloco
+
+            if (senha === senhaCorreta) {
+                document.getElementById("conteudo" + numeroBloco).style.display = "block";
+            } else {
+                alert("Senha incorreta!");
+            }
+        }
+        function verificarSenhaLoja(){
+            var senhaLoja = document.getElementById("herbalistapass").value;
+            var senhaCorretaLoja = "herbalista"
+
+            if (senhaLoja === senhaCorretaLoja) {
+                document.getElementById("herbalistaLoja").style.display = "block";
+            } else {
+                alert("Senha incorreta!");
+            }
+        }
+        function verificarSenhaFerreiro(){
+            var senha = document.getElementById("ferreiroPass").value;
+            var senhaCorreta = "ferreiro"
+
+            if (senha === senhaCorreta) {
+                document.getElementById("ferreiro").style.display = "block";
+            } else {
+                alert("Senha incorreta!");
+            }
+        }
+    </script>
+
+</body>
+</html>

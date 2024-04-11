@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#formulario {
+    text-align: center;
+}
+
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.principal {
+    display:contents;
+    width: 300px; /* largura desejada */
+    height: 200px; /* altura desejada */
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}

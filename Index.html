@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <label for="senha">Digite a senha:</label>
+    <input type="password" id="senha">
+    <button id="botao">Ir para Página</button>
+
+    <script>
+        document.getElementById("botao").addEventListener("click", function() {
+            var senhaDigitada = document.getElementById("senha").value;
+            var destino = "";
+
+            // Verifica a senha e define a página de destino
+            if (senhaDigitada === "oldhammer") {
+                destino = "OldHammer.html";
+            } else if (senhaDigitada === "infernus") {
+                destino = "Infernus.html";
+            }else if (senhaDigitada === "larion") {
+                destino = "Infernus.html";
+            } else {
+                alert("Senha incorreta!");
+                return;
+            }
+
+            // Redireciona para a página de destino
+            window.location.href = destino;
+        });
+    </script>
+
+</body>
+</html>
